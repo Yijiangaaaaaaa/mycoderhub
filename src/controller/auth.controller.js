@@ -1,4 +1,4 @@
-const service = require('../service/auth.service')
+//const service = require('../service/auth.service')
 
 class AuthController {
     //

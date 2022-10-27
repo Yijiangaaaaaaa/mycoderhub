@@ -5,7 +5,9 @@ const authRouter = new Router({prefix:'/login'});
 const {
     login
 } = require('../controller/auth.controller.js')
-
-authRouter.post('/login',login)
+const {
+    verifyLogin
+} = require('../middleWare/auth.middleWare')
+authRouter.post('/',verifyLogin,login)
 
 module.exports=authRouter
